@@ -3,13 +3,16 @@ MEMORY
 {
     BOOT_FLASH : ORIGIN = 0x08000000, LENGTH = 4K
     APP_FLASH  : ORIGIN = 0x08001000, LENGTH = 60K
-    RAM        : ORIGIN = 0x20000000, LENGTH = 20K
+    RAM        : ORIGIN = 0x20000000, LENGTH = 16K
+    ERAM       : ORIGIN = 0x2000F000, LENGTH = 4K
 }
 
 __bootflash_start__ = ORIGIN(BOOT_FLASH);
 __bootflash_size__ = LENGTH(BOOT_FLASH);
 __appflash_start__ = ORIGIN(APP_FLASH);
 __appflash_size__ = LENGTH(APP_FLASH);
+__eram_start__ = ORIGIN(ERAM);
+__eram_size__ = LENGTH(ERAM);
 
 
 /* Sections Definitions */
